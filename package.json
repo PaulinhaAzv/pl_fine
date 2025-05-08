@@ -61,6 +61,7 @@
     "husky": "^9.1.7",
     "jsdom": "^24.0.0",
     "lint-staged": "^15.2.2",
+    "nodemon": "^3.1.10",
     "postcss": "^8.5.3",
     "postcss-preset-env": "^9.3.0",
     "prettier": "^3.2.5",
