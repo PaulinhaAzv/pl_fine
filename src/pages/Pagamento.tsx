@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { toast } from 'react-hot-toast';
-import { GUMROAD_PRODUCTS } from '../lib/gumroad';
 
 export const Pagamento: React.FC = () => {
   const [loading, setLoading] = useState(false);
