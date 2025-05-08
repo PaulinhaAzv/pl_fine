@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import { supabase } from '../lib/supabase';
-import { debugAdminCheck } from '../lib/supabase';
+import { supabase, debugAdminCheck } from '@/lib/supabase';
 import { SupabaseError } from '@/types';
 import { logger } from '@/utils/logger';
 
