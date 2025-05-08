@@ -2,6 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply text-base;
+  }
+
+  img {
+    @apply max-w-full h-auto block;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg border border-white/10 p-4;
+    background-color: var(--surface);
+  }
+
+  .modal-content {
+    @apply rounded-lg border border-white/10 p-6;
+    background-color: var(--surface);
+  }
+
+  .toast {
+    @apply rounded-lg border border-white/10 p-4;
+    background-color: var(--surface);
+  }
+
+  .tooltip-text {
+    @apply rounded-lg border border-white/10 p-2;
+    background-color: var(--surface);
+  }
+
+  .input {
+    @apply rounded-lg border border-white/10 p-2;
+    background-color: var(--surface);
+  }
+
+  .button {
+    @apply rounded-lg border border-white/10 p-2;
+    background-color: var(--primary);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+}
+
 :root {
   --primary: #e91e63;
   --background: #000000;
