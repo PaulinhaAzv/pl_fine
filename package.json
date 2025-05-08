@@ -15,7 +15,8 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "setup": "husky install",
-    "postinstall": "[ \"$NODE_ENV\" != \"production\" ] && npm run setup || true"
+    "postinstall": "[ \"$NODE_ENV\" != \"production\" ] && npm run setup || true",
+    "check-husky": "grep -r 'husky.sh' .husky && echo \"⚠️ Atenção: ainda existem scripts com husky.sh\" || echo \"✅ Husky configurado corretamente\""
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
