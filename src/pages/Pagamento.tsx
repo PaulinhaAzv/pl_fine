@@ -30,15 +30,13 @@ export const Pagamento: React.FC = () => {
         return;
       }
 
-      const productId = GUMROAD_PRODUCTS[plano as keyof typeof GUMROAD_PRODUCTS];
-      if (!productId) {
-        toast.error('Plano inválido');
-        return;
-      }
+      // Redirecionar para o checkout do OpenPix
+      const openpixUrl =
+        plano === 'basico'
+          ? 'https://openpix.com.br/pay/dca7fd01-bd6e-4a2d-bb7c-16f3ad07e8b2'
+          : 'https://openpix.com.br/pay/19b39aee-9a21-4568-bc59-2432a0b1912e';
 
-      // Redirecionar para o checkout do Gumroad
-      const gumroadUrl = `https://${import.meta.env.VITE_GUMROAD_SHOP_NAME}.gumroad.com/l/${productId}?wanted=true&email=${encodeURIComponent(email)}`;
-      window.location.href = gumroadUrl;
+      window.location.href = openpixUrl;
     } catch (error) {
       console.error('Erro ao processar pagamento:', error);
       toast.error('Ocorreu um erro ao processar seu pagamento');
