@@ -6,7 +6,7 @@ import { toast } from 'react-hot-toast';
 interface PaymentProps {
   planId: string;
   userEmail: string;
-  onSuccess?: () => void;
+  _onSuccess?: () => void;
 }
 
 export const Payment = ({ planId, userEmail, _onSuccess }: PaymentProps) => {
@@ -20,6 +20,7 @@ export const Payment = ({ planId, userEmail, _onSuccess }: PaymentProps) => {
       const payment = await createPayment(planId, userEmail);
       if (payment) {
         toast.success('Pagamento iniciado com sucesso!');
+        _onSuccess?.();
         navigate('/success');
       }
     } catch (error) {
