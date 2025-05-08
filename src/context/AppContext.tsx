@@ -46,7 +46,7 @@ function appReducer(state: AppState, action: AppAction): AppState {
 }
 
 // Contexto
-const AppContext = createContext<{
+export const AppContext = createContext<{
   state: AppState;
   dispatch: React.Dispatch<AppAction>;
   login: (email: string) => Promise<boolean>;
