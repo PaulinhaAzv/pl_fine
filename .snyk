@@ -1,0 +1,22 @@
+version: v1.25.0
+ignore:
+  'npm:minimatch:20220621':
+    - '*':
+        reason: 'Dependência transitiva do Vite'
+        expires: '2024-12-31T00:00:00.000Z'
+  'npm:semver:20231020':
+    - '*':
+        reason: 'Dependência transitiva do Vite'
+        expires: '2024-12-31T00:00:00.000Z'
+  'npm:word-wrap:20231020':
+    - '*':
+        reason: 'Dependência transitiva do Vite'
+        expires: '2024-12-31T00:00:00.000Z'
+  'npm:postcss:20231020':
+    - '*':
+        reason: 'Dependência transitiva do Tailwind'
+        expires: '2024-12-31T00:00:00.000Z'
+  'npm:postcss-preset-env:20231020':
+    - '*':
+        reason: 'Dependência transitiva do Tailwind'
+        expires: '2024-12-31T00:00:00.000Z' 
