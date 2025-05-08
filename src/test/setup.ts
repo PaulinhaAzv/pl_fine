@@ -17,14 +17,15 @@ class ResizeObserver {
 window.ResizeObserver = ResizeObserver;
 
 // Mock do IntersectionObserver
-class IntersectionObserver {
-  constructor() {}
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-}
-
-window.IntersectionObserver = IntersectionObserver;
+Object.defineProperty(window, 'IntersectionObserver', {
+  writable: true,
+  configurable: true,
+  value: class {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  },
+});
 
 // Mock do matchMedia
 Object.defineProperty(window, 'matchMedia', {
