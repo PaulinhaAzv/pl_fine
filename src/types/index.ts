@@ -13,10 +13,12 @@ export interface User {
 // Tipos de post
 export interface Post {
   id: string;
-  image_url: string;
-  description: string;
-  created_at: string;
-  likes: number;
+  title: string;
+  content: string;
+  image_url?: string;
+  description?: string;
+  created_at?: string;
+  likes?: number;
   user_liked?: boolean;
 }
 
